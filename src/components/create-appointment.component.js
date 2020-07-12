@@ -9,7 +9,9 @@ export default class CreateExercises extends Component {
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeFirstName = this.onChangeFirstName.bind(this);
     this.onChangeLastName = this.onChangeLastName.bind(this);
+    this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -18,6 +20,8 @@ export default class CreateExercises extends Component {
       username: "",
       firstname: "",
       lastname: "",
+      phonenumber: "",
+      email: "",
       description: "",
       duration: 0,
       date: new Date(),
@@ -50,6 +54,18 @@ export default class CreateExercises extends Component {
     });
   }
 
+  onChangePhoneNumber(e) {
+    this.setState({
+      phonenumber: e.target.value
+    });
+  }
+
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
   onChangeDescription(e) {
     this.setState({
       description: e.target.value
@@ -75,6 +91,8 @@ export default class CreateExercises extends Component {
       username: this.state.username,
       firstname: this.state.firstname,
       lastname: this.state.lastname,
+      phonenumber: this.state.phonenumber,
+      email: this.state.email,
       description: this.state.description,
       duration: this.state.duration,
       date: this.state.date
@@ -124,6 +142,26 @@ export default class CreateExercises extends Component {
               className="form-control"
               value={this.state.lastname}
               onChange={this.onChangeLastName}
+              />
+        </div>
+      </div>
+      <div className="f_lName">
+        <div className="form-group">
+          <label>Mobile Number: </label>
+          <input  type="number"
+              required
+              className="form-control"
+              value={this.state.phonenumber}
+              onChange={this.onChangePhoneNumber}
+              />
+        </div>
+        <div className="form-group">
+          <label>Email: </label>
+          <input  type="email"
+              required
+              className="form-control"
+              value={this.state.email}
+              onChange={this.onChangeEmail}
               />
         </div>
       </div>

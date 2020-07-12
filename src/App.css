@@ -33,6 +33,10 @@
   /* flex-wrap: wrap; */
 }
 
+.form-group {
+  margin-right: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
