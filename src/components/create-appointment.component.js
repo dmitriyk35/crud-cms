@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -10,8 +11,8 @@ export default class CreateExercises extends Component {
     this.onChangeFirstName = this.onChangeFirstName.bind(this);
     this.onChangeLastName = this.onChangeLastName.bind(this);
     this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
-    this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -30,10 +31,15 @@ export default class CreateExercises extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      users: ['test user'],
-      username: 'test user'
-    })
+    axios.get('http://localhost:5000/users/')
+      .then(response => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data.map[user => user.username],
+            username: response.data[0].username
+          })
+        }
+      })
   }
 
   onChangeUsername(e) {
@@ -87,7 +93,7 @@ export default class CreateExercises extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const exercise = {
+    const service = {
       username: this.state.username,
       firstname: this.state.firstname,
       lastname: this.state.lastname,
@@ -98,7 +104,10 @@ export default class CreateExercises extends Component {
       date: this.state.date
     }
 
-    console.log(exercise)
+    console.log(service);
+
+    axios.post('http://localhost:5000/services/add', service)
+      .then(res => console.log(res.data));
 
     window.location = '/';
   }
