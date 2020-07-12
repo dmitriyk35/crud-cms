@@ -4,7 +4,7 @@ export default class ExercisesList extends Component {
   render() {
       return (
         <div>
-          <p>You are on the Exercises List component!</p>
+          <p>You are on the Services List component!</p>
         </div>
       )
     }

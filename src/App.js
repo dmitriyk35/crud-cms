@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 import Navbar from "./components/navbar.component";
-import ExercisesList from "./components/exercises-list.component";
-import EditExercise from "./components/edit-exercise.component";
-import CreateExercise from "./components/create-exercise.component";
+import ServicesList from "./components/services-list.component";
+import EditService from "./components/edit-service.component";
+import CreateAppointment from "./components/create-appointment.component";
 import CreateUser from "./components/create-user.component";
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
     <div className="container">
       <Navbar />
         <br/>
-        <Route path="/" exact component={ExercisesList} />
-        <Route path="/edit/:id" component={EditExercise} />
-        <Route path="/create" component={CreateExercise} />
+        <Route path="/" exact component={ServicesList} />
+        <Route path="/edit/:id" component={EditService} />
+        <Route path="/create" component={CreateAppointment} />
         <Route path="/user" component={CreateUser} />
     </div>
     </Router>

@@ -7,6 +7,8 @@ export default class CreateExercises extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeFirstName = this.onChangeFirstName.bind(this);
+    this.onChangeLastName = this.onChangeLastName.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
@@ -14,6 +16,8 @@ export default class CreateExercises extends Component {
 
     this.state = {
       username: "",
+      firstname: "",
+      lastname: "",
       description: "",
       duration: 0,
       date: new Date(),
@@ -31,6 +35,18 @@ export default class CreateExercises extends Component {
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
+    });
+  }
+
+  onChangeFirstName(e) {
+    this.setState({
+      firstname: e.target.value
+    });
+  }
+
+  onChangeLastName(e) {
+    this.setState({
+      lastname: e.target.value
     });
   }
 
@@ -57,6 +73,8 @@ export default class CreateExercises extends Component {
 
     const exercise = {
       username: this.state.username,
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
       description: this.state.description,
       duration: this.state.duration,
       date: this.state.date
@@ -70,10 +88,10 @@ export default class CreateExercises extends Component {
   render() {
       return (
         <div>
-      <h3>Create New Exercise Log</h3>
+      <h3>Create New Appointment With A Barber</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
-          <label>Username: </label>
+          <label>Username: </label> {/* maybe change username to barber? */}
           <select ref="userInput"
               required
               className="form-control"
@@ -89,6 +107,26 @@ export default class CreateExercises extends Component {
               }
           </select>
         </div>
+      <div className="f_lName">
+        <div className="form-group">
+          <label>First Name: </label>
+          <input  type="text"
+              required
+              className="form-control"
+              value={this.state.firstname}
+              onChange={this.onChangeFirstName}
+              />
+        </div>
+        <div className="form-group">
+          <label>Last Name: </label>
+          <input  type="text"
+              required
+              className="form-control"
+              value={this.state.lastname}
+              onChange={this.onChangeLastName}
+              />
+        </div>
+      </div>
         <div className="form-group">
           <label>Description: </label>
           <input  type="text"
