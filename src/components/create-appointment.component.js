@@ -3,7 +3,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class CreateExercises extends Component {
+export default class CreateServices extends Component {
   constructor(props) {
     super(props);
 
@@ -207,7 +207,7 @@ export default class CreateExercises extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
+          <input type="submit" value="Create Service Log" className="btn btn-primary" />
         </div>
       </form>
     </div>

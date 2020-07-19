@@ -2,7 +2,23 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default class ExercisesList extends Component {
+const Service = props => (
+  <tr>
+    <td>{props.service.username}</td>
+    <td>{props.service.firstname}</td>
+    <td>{props.service.lastname}</td>
+    <td>{props.service.phonenumber}</td>
+    <td>{props.service.email}</td>
+    <td>{props.service.description}</td>
+    <td>{props.service.duration}</td>
+    <td>{props.service.date.substring(0,10)}</td>
+    <td>
+      <Link to={"/edit/"+props.service._id}>edit</Link> | <a href="#" onClick={() => { props.deleteService(props.service._id) }}>delete</a>
+    </td>
+  </tr>
+)
+
+export default class ServicesList extends Component {
   constructor(props) {
     super(props)
 
@@ -30,11 +46,38 @@ export default class ExercisesList extends Component {
   })
 }
 
+serviceList() {
+  return this.state.services.map(currentservice => {
+    return <Service service={currentservice} deleteService={this.deleteService} key={currentservice._id}/>;
+  })
+}
+
+
   render() {
       return (
         <div>
-          <p>You are on the Services List component!</p>
-        </div>
+        <h3>Logged Services</h3>
+        <table className="table">
+          <thead className="thead-light">
+            <tr>
+              <th>Username</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Description</th>
+              <th>Duration</th>
+              <th>Date</th>
+              <th>Actions</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            { this.serviceList() }
+          </tbody>
+        </table>
+      </div>
       )
     }
 }
