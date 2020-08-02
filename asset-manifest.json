@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/mern-crud2/static/css/main.a144baaf.chunk.css",
-    "main.js": "/mern-crud2/static/js/main.0c2ce970.chunk.js",
-    "main.js.map": "/mern-crud2/static/js/main.0c2ce970.chunk.js.map",
-    "runtime-main.js": "/mern-crud2/static/js/runtime-main.20e0748b.js",
-    "runtime-main.js.map": "/mern-crud2/static/js/runtime-main.20e0748b.js.map",
-    "static/css/2.d98961f1.chunk.css": "/mern-crud2/static/css/2.d98961f1.chunk.css",
-    "static/js/2.d81193f4.chunk.js": "/mern-crud2/static/js/2.d81193f4.chunk.js",
-    "static/js/2.d81193f4.chunk.js.map": "/mern-crud2/static/js/2.d81193f4.chunk.js.map",
-    "index.html": "/mern-crud2/index.html",
-    "precache-manifest.d4afd468dd94a4acffb738d6cac9f35f.js": "/mern-crud2/precache-manifest.d4afd468dd94a4acffb738d6cac9f35f.js",
-    "service-worker.js": "/mern-crud2/service-worker.js",
-    "static/css/2.d98961f1.chunk.css.map": "/mern-crud2/static/css/2.d98961f1.chunk.css.map",
-    "static/css/main.a144baaf.chunk.css.map": "/mern-crud2/static/css/main.a144baaf.chunk.css.map",
-    "static/js/2.d81193f4.chunk.js.LICENSE.txt": "/mern-crud2/static/js/2.d81193f4.chunk.js.LICENSE.txt"
+    "main.css": "/crud-cms/static/css/main.a144baaf.chunk.css",
+    "main.js": "/crud-cms/static/js/main.2f83aa03.chunk.js",
+    "main.js.map": "/crud-cms/static/js/main.2f83aa03.chunk.js.map",
+    "runtime-main.js": "/crud-cms/static/js/runtime-main.bc7f0c82.js",
+    "runtime-main.js.map": "/crud-cms/static/js/runtime-main.bc7f0c82.js.map",
+    "static/css/2.d98961f1.chunk.css": "/crud-cms/static/css/2.d98961f1.chunk.css",
+    "static/js/2.d81193f4.chunk.js": "/crud-cms/static/js/2.d81193f4.chunk.js",
+    "static/js/2.d81193f4.chunk.js.map": "/crud-cms/static/js/2.d81193f4.chunk.js.map",
+    "index.html": "/crud-cms/index.html",
+    "precache-manifest.0f227be8df721dd4752d215d84fc7979.js": "/crud-cms/precache-manifest.0f227be8df721dd4752d215d84fc7979.js",
+    "service-worker.js": "/crud-cms/service-worker.js",
+    "static/css/2.d98961f1.chunk.css.map": "/crud-cms/static/css/2.d98961f1.chunk.css.map",
+    "static/css/main.a144baaf.chunk.css.map": "/crud-cms/static/css/main.a144baaf.chunk.css.map",
+    "static/js/2.d81193f4.chunk.js.LICENSE.txt": "/crud-cms/static/js/2.d81193f4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.20e0748b.js",
+    "static/js/runtime-main.bc7f0c82.js",
     "static/css/2.d98961f1.chunk.css",
     "static/js/2.d81193f4.chunk.js",
     "static/css/main.a144baaf.chunk.css",
-    "static/js/main.0c2ce970.chunk.js"
+    "static/js/main.2f83aa03.chunk.js"
   ]
 }
