@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import FacebookLogin from 'react-facebook-login';
+
+const responseFacebook = (response) => {
+  console.log(response);
+}
 
 export default class CreateServices extends Component {
   constructor(props) {
@@ -119,6 +124,15 @@ export default class CreateServices extends Component {
   render() {
       return (
         <div>
+
+        <FacebookLogin
+        appId="297560121491950"
+        autoLoad={false}
+          fields="name,email,picture"
+          callback={responseFacebook}
+      />
+
+      
       <h3>Create New Appointment With A Barber</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
